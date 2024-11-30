@@ -19,7 +19,9 @@ async function run() {
     messages.push(msg)
   }
 
+  console.log(messages);
+
   await notify.sendNotify(`iKuuu VPN 今日流量统计`, messages.join('\n\n========================\n\n'))
 }
 
-run()
+run().catch(console.log)
